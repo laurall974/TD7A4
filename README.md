@@ -1,6 +1,11 @@
 # TD7 - Cloud computing
 ## 🌟 Goal
+
+We want to create a container with flask that connects to a mongodb which runs on another container. Fetches data and shows it on a webpage on your host machine.
+
 Use Docker to reads a text file on your host and shows the content on a web page. Any changes in the content of this file should be shown by refreshing the web page.
+
+Make the database persistent.
 
 ## 👷 Prerequisites
 
