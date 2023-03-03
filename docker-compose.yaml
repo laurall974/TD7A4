@@ -7,7 +7,7 @@ services:
       - mongodb_data:/data/db 
     command: mongod --bind_ip_all #allow connexion to all ip adresses
   app:
-    image: flaskapp 
+    build: . 
     volumes:
       - ./host_file:/app/data 
     ports:
