@@ -1,0 +1,19 @@
+version: '3'
+
+services: 
+  mongodb:
+    image: mongo 
+    volumes:
+      - mongodb_data:/data/db 
+    command: mongod --bind_ip_all #allow connexion to all ip adresses
+  app:
+    image: flaskapp 
+    volumes:
+      - ./host_file:/app/data 
+    ports:
+      - "5000:5000" 
+    depends_on:
+      - mongodb
+
+volumes: 
+  mongodb_data:
