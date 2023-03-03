@@ -17,14 +17,24 @@ app = Flask(__name__)
 # within the Docker network
 client = MongoClient("mongodb://mongodb:27017/")
 
-# Get a reference to the test_database
-#db = client.test_database
- 
-# Get a reference to the test_collection
-db = client.personne
 
 # Get a reference to the test_collection
-collection = db.poste
+#db = client.personne
+
+# Get a reference to the test_collection
+#collection = db.poste
+
+
+db = client["personne"]
+collection = db["poste"]
+
+posts = [    { "nom": "Laura ", "age": 22, "profession": "Développeur" },    
+         { "nom": "Celine ", "age": 12, "profession": "Ingénieur" },    
+         { "nom": "Jolyane ", "age": 8, "profession": "Doctor" },
+         { "nom": "Timothé", "age": 21, "profession": "Chomeur" }]
+
+collection.insert_many(posts)
+
 
 # Define the route for the index page
 @app.route("/")
