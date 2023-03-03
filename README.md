@@ -29,6 +29,7 @@ Use Docker to reads a text file on your host and shows the content on a web pa
 The text file `text.txt` is the one you need to modify to display something else on your browser. 
 
 Check the result : http://localhost:5000/text & http://localhost:5000
+
 You can also veirfy mounts : `docker inspect <container-mongo-name>`
 
 ## 🗒 With docker compose
