@@ -40,7 +40,7 @@ You can also veirfy mounts : `docker inspect <container-mongo-name>`
 ## 🗒 With docker compose
 This one will be very quick. 
 
-1. Go to the repository folder : `cd <path-to-repository>`
+1. Go to the repository folder : `cd <path-to-repository>` (TD704)
 
 2. Run : `docker compose up -d`
 
